@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import Quote from '../../components/quote';
+import './style.scss';
 
 export default function Homepage() {
   const [quotesData, setquotesData] = useState([]);
@@ -7,10 +9,10 @@ export default function Homepage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log('fetching data...');
+      // console.log('fetching data...');
       const response = await fetch('https://quote-garden.herokuapp.com/api/v3/quotes?limit=2000')
       const quotes = await response.json()
-      console.log(quotes.data);
+      // console.log(quotes.data);
       setquotesData(quotes.data)
     }
     fetchData()
@@ -24,11 +26,9 @@ export default function Homepage() {
 
 
   return (
-    <div>
-      <h1>Homepage</h1>
-      <div>{quote}</div>
-      <div>{author}</div>
+    <div className='homepage'>
       <button onClick={handleClick}>Click me</button>
+      <Quote quote= {quote} />
     </div>
     
   )

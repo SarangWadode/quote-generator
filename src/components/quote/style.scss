@@ -1,0 +1,28 @@
+.quote {
+  max-width: 400px;
+  max-height: 100%;
+  background: #fff;
+  display: flex;
+  padding: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  color: #000;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+  // box-shadow: 0 3px 3px -2px rgb(0 0 0 / 10%), 0 3px 4px 0 rgb(0 0 0 / 7%), 0 1px 8px 0 rgb(0 0 0 / 6%);
+
+  .bar {
+    width: 5px;
+    height: 100%;
+    background: #f7df94;
+    border-radius: 2px;
+  }
+
+  .quote-text {
+    width: 100%;
+    padding-left: 35px;
+    text-align: left;
+  }
+}
