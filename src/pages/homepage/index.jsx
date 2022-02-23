@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.scss';
 import Quote from '../../components/quote';
 import Author from '../../components/author';
+import Random from '../../components/random';
 
 export default function Homepage() {
   const [quotesData, setquotesData] = useState([]);
@@ -30,7 +31,7 @@ export default function Homepage() {
 
   return (
     <div className='homepage'>
-      <button onClick={handleClick}>Click me</button>
+      <Random handleClick={handleClick} />
       <Quote quote= {quote} />
       <Author author={author} genre={genre} />
     </div>
