@@ -1,0 +1,37 @@
+.author-card {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
+  .author-quote {
+    text-align: left;
+    line-height: 28px;
+
+    .author-name {
+      color: #4f4f4f;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .quote-genre {
+      font-size: 14px;
+      color: #828282;
+    }
+  }
+
+  &:hover {
+    background: #333333;
+    cursor: pointer;
+
+    .author-name {
+      color: #f2f2f2;
+    }
+  }
+}
+
