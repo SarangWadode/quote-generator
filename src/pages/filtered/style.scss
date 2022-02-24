@@ -1,0 +1,15 @@
+.filtered {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .author {
+        color: #333;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}

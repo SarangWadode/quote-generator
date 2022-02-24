@@ -9,7 +9,8 @@ function App() {
   const [quote, setquote] = useState("Art is man's constant effort to create for himself a different order of reality from that which is given to him.");
   const [author, setauthor] = useState('Chinua Achebe');
   const [genre, setgenre] = useState('art');
-  const [more, setmore] = useState('');
+  const [filtered, setfiltered] = useState([{quoteText:"Thomas Jefferson once said, 'We should never judge a president by his age, only by his works.' And ever since he told me that, I stopped worrying."},
+   {quoteText:"Information is the oxygen of the modern age. It seeps through the walls topped by barbed wire, it wafts across the electrified borders."}]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,10 +21,11 @@ function App() {
       console.log('data fetched');
       setquotesData(quotes.data);
       // console.log(quotes.data);
-      const authors = quotes.data.filter(quote => {
+      const filteredList = quotes.data.filter(quote => {
         return quote.quoteAuthor === 'Ronald Reagan';
       })
-      setmore(authors);
+      setfiltered(filteredList);
+      console.log(filteredList);
     }
     fetchData()
   }, [])
@@ -33,12 +35,18 @@ function App() {
     setquote(quotesData[random].quoteText)
     setauthor(quotesData[random].quoteAuthor)
     setgenre(quotesData[random].quoteGenre)
+    const filteredList = quotesData.filter(quote => {
+      return quote.quoteAuthor === quotesData[random].quoteAuthor;
+    })
+    setfiltered(filteredList);
+    console.log(filteredList);
+
   }
   return (
     <div className="App">
       <Random handleClick={handleClick} />
       <Homepage quote={quote} author={author} genre={genre} />
-      {/* <Filtered /> */}
+      {/* <Filtered filtered={filtered} author={author} /> */}
     </div>
   );
 }
