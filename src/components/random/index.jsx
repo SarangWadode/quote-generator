@@ -3,14 +3,14 @@ import './style.scss';
 
 export default function Random({ handleClick, datafetch }) {
     return (
-        <>  {datafetch ?
-            <button className='random' onClick={handleClick}>
+        <div className='random'>  {datafetch ?
+            <button className='button' onClick={handleClick}>
                 random
-                <CachedIcon style={{fontSize: '20px', paddingLeft: '5px'}} />
+                <CachedIcon style={{ fontSize: '20px', paddingLeft: '5px' }} />
             </button>
             :
             <div className="wait">Fetching data please wait ...</div>
         }
-        </>
+        </div>
     )
 }

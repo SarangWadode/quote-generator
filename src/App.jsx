@@ -3,6 +3,7 @@ import './App.css';
 import Homepage from './pages/homepage';
 import Filtered from './pages/filtered';
 import Random from './components/random';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [quotesData, setquotesData] = useState([]);
@@ -45,11 +46,17 @@ function App() {
 
   }
   return (
-    <div className="App">
-      <Random handleClick={handleClick} datafetch={datafetch} /> 
-      <Homepage quote={quote} author={author} genre={genre} />
-      {/* <Filtered filtered={filtered} author={author} /> */}
-    </div>
+    < BrowserRouter >
+        <Random handleClick={handleClick} datafetch={datafetch} />
+      <Routes>
+        <Route path="/" element={<Homepage quote={quote} author={author} genre={genre} />} >
+          {/* <Route index element={<Homepage quote={quote} author={author} genre={genre} />} /> */}
+          <Route path="authors" element={<Filtered filtered={filtered} author={author} />} />
+          <Route path="*" element={<div><h1>404 Error Page Not Found</h1></div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 

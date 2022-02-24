@@ -1,28 +1,33 @@
 .random {
-  width: 100px;
-  height: 30px;
-  position: absolute;
-  top: 20px;
-  right: 100px;
-  color: #333333;
-  align-items: center;
-  font-size: 15px;
-  text-align: center;
   display: flex;
-  justify-content: center;
-  border: none;
-  background: none;
-  box-shadow: none;
-  cursor: pointer;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 20%;
+  font-size: 15px;
 
-  &:hover {
-    background: rgba(41, 98, 255, 0.1);
-    border-radius: 6px;
-    color: #3d5afe;
+  .button {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    color: #333333;
+    align-items: center;
+    text-align: center;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(41, 98, 255, 0.1);
+      border-radius: 6px;
+      color: #3d5afe;
+    }
   }
-}
 
-.wait {
-  margin-top: 20px;
-  font-style: italic;
+  .wait {
+    font-style: italic;
+  }
 }

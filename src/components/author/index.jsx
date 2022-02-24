@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom';
 import './style.scss';
-
 
 export default function Author({ author, genre }) {
     return (
@@ -9,7 +9,7 @@ export default function Author({ author, genre }) {
                 <div className="quote-genre"> {genre} </div>
             </div>
             <div className="more">
-                next       
+                <Link className='kuch' to='authors'>next</Link>     
             </div>
         </div>
     )

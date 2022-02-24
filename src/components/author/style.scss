@@ -35,3 +35,12 @@
   }
 }
 
+.more {
+  .kuch {
+    text-decoration: none;
+    color: rgb(84, 235, 197);
+    &:hover {
+      color: #f2f2f2;
+    }
+  }
+}
