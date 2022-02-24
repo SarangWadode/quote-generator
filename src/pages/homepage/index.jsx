@@ -3,6 +3,7 @@ import './style.scss';
 import Quote from '../../components/quote';
 import Author from '../../components/author';
 import Random from '../../components/random';
+import Footer from '../../components/footer';
 
 export default function Homepage() {
   const [quotesData, setquotesData] = useState([]);
@@ -34,6 +35,7 @@ export default function Homepage() {
       <Random handleClick={handleClick} />
       <Quote quote= {quote} />
       <Author author={author} genre={genre} />
+      <Footer />
     </div>
     
   )

@@ -1,0 +1,17 @@
+.footer {
+    color: #828282;
+    font-size: 14px;
+
+    .github, .devchallenges {
+        color: #828282;
+        text-decoration: none;
+
+        &:hover {
+            color: #3d5afe;
+        }
+    }
+
+    .github {
+        font-weight: 600;
+    }
+}
