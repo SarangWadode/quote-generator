@@ -1,15 +1,25 @@
 .filtered {
-    width: 100vw;
-    height: 100vh;
-    background: #fff;
+    width: 100%;
+    height: 100%;
+    // background: rgb(190, 72, 72);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    overflow-y: scroll;
 
     .author {
         color: #333;
         font-size: 25px;
         font-weight: bold;
+        margin: 30px 0 20px 0;
+    }
+
+    .quote {
+        margin: 25px 0;
+    }
+
+    .footer {
+        margin: 20px 0;
     }
 }

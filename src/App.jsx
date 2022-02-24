@@ -21,11 +21,11 @@ function App() {
       console.log('data fetched');
       setquotesData(quotes.data);
       // console.log(quotes.data);
-      const filteredList = quotes.data.filter(quote => {
-        return quote.quoteAuthor === 'Ronald Reagan';
-      })
-      setfiltered(filteredList);
-      console.log(filteredList);
+      // const filteredList = quotes.data.filter(quote => {
+      //   return quote.quoteAuthor === 'Ronald Reagan';
+      // })
+      // setfiltered(filteredList);
+      // console.log(filteredList);
     }
     fetchData()
   }, [])
@@ -39,14 +39,14 @@ function App() {
       return quote.quoteAuthor === quotesData[random].quoteAuthor;
     })
     setfiltered(filteredList);
-    console.log(filteredList);
+    // console.log(filteredList);
 
   }
   return (
     <div className="App">
       <Random handleClick={handleClick} />
-      <Homepage quote={quote} author={author} genre={genre} />
-      {/* <Filtered filtered={filtered} author={author} /> */}
+      {/* <Homepage quote={quote} author={author} genre={genre} /> */}
+      <Filtered filtered={filtered} author={author} />
     </div>
   );
 }
