@@ -27,9 +27,12 @@
 
   &:hover {
     background: #333333;
-    cursor: pointer;
 
     .author-name {
+      color: #f2f2f2;
+    }
+
+    .quote-genre {
       color: #f2f2f2;
     }
   }
